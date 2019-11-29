@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+@font-face 
+{
+  font-family: 'Monoton';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Monoton'), local('Monoton-Regular'), url(http://themes.googleusercontent.com/static/fonts/monoton/v4/AKI-lyzyNHXByGHeOcds_w.woff) format('woff');
+}
+
+body{
+  background-color: #222222;
+}
+
+.title {
+	font-family: "Montserrat";
+	text-align: center;
+	color: #FFF;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	letter-spacing: 1px;
+}
+
+h1 {
+	background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+	background-size: cover;
+	color: transparent;
+	-moz-background-clip: text;
+	-webkit-background-clip: text;
+	text-transform: uppercase;
+	font-size: 50px;
+	line-height: .75;
+}
+/* styling my button */
+
+.white-mode {
+	text-decoration: none;
+	background-color: #122;
+	color: #FFF;
+	transition: .35s ease-in-out;
+	position: absolute;
+	left: 15px;
+	font-family: "Montserrat";
+}
+
+.white-mode:hover {
+	background-color: #FFF;
+	color: #122;
+}
+
+/*neon effect*/
+p
+{
+  text-align:center;
+  font-size:6em;
+  margin:0px 0 15px 0;
+}
+
+a
+{
+  text-decoration:none;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+p:nth-child(1) a
+{
+  color:#FF1177;
+  font-family:Monoton;
+}
+
+p:nth-child(1) a:hover
+{
+  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+  animation: neon1 1.5s ease-in-out infinite alternate;
+}
+
+p a:hover
+{
+	color:#ffffff;
+}
+
+/*glow for webkit-ket-frames*/
+@-webkit-keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff,
+               0 0 20px  #fff,
+               0 0 30px  #fff,
+               0 0 40px  #FF1177,
+               0 0 70px  #FF1177,
+               0 0 80px  #FF1177,
+               0 0 100px #FF1177,
+               0 0 150px #FF1177;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+               0 0 10px #fff,
+               0 0 15px #fff,
+               0 0 20px #FF1177,
+               0 0 35px #FF1177,
+               0 0 40px #FF1177,
+               0 0 50px #FF1177,
+               0 0 75px #FF1177;
+  }
+}
+
+#portaRetrato 
+{
+	position: relative; 
+	width: 640px; height: 480px; 
+	margin: auto; 
+	text-align: center; 
+	font: bold 26px/1.5 fantasy; 
+	background-color: white; 
+	cursor: not-allowed; 
+}
+
+#portaRetrato:after 
+{
+	content: ''; 
+	position: absolute; 
+	height: 420px; 
+	width: 30px; 
+	border-bottom: 30px inset lightpink; 
+	border-top: 5px inset lightpink; 
+	bottom: 0; 
+	left: 305px; 
+	z-index: 8; /*SIEMPRE QUEDA POR DELANTE DE LAS 8 IMÁGENES*/
+	background-color: rgba(0,0,0,0); /*FUERZA OPACIDAD AL CLICK*/
+}
+
+#marcoI 
+{
+	position: absolute; 
+	left: 0; top: 0; 
+	width: 315px; height: 480px; 
+	-moz-box-sizing:border-box; 
+	box-sizing:border-box; 
+	border: 30px inset lightpink; 
+	border-right: 0 inset transparent; 
+	border-radius: 0 50px 0 0 / 0 30px 0 0; 
+	z-index: 8; /*SIEMPRE QUEDA POR DELANTE DE LAS 8 IMÁGENES*/
+	background-color: rgba(0,0,0,0); /*FUERZA OPACIDAD AL CLICK*/
+}
+
+#marcoD 
+{
+	position: absolute; 
+	left: 325px; top: 0; 
+	width: 315px; height: 480px; 
+	-moz-box-sizing:border-box; 
+	box-sizing:border-box; 
+	border: 30px inset lightpink; 
+	border-left: 0 inset transparent; 
+	border-radius: 50px 0 0 0 / 30px 0 0 0; 
+	z-index: 8; /*SIEMPRE QUEDA POR DELANTE DE LAS 8 IMÁGENES*/
+	background-color: rgba(0,0,0,0); /*FUERZA OPACIDAD AL CLICK*/
+}
+
+#foto10, #foto11, #foto18
+{
+	display: inline-block; 
+	position: absolute; 
+	top: -700px; left: 0; right: 0;
+	margin: auto; 
+	border: none; 
+	width: 580px ; height: 480px; 
+	cursor: pointer; /*CURSOR POR OMISIÓN*/
+}
+
+#foto0, #foto1, #foto2, #foto3, #foto4, #foto5, #foto6, #foto7, #foto8, #foto9, #foto12, #foto13, #foto14, #foto15, #foto16, #foto17, #foto19
+{
+	display: inline-block; 
+	position: absolute; 
+	top: -700px; left: 0; right: 0;
+	margin: auto; 
+	border: none; 
+	width: auto ; height: 480px; 
+	cursor: pointer; /*CURSOR POR OMISIÓN*/
+}
+
+#foto0 
+{
+	width: 100%; 
+	top: 0; /*COMO FONDO, NO SE DESPLAZA*/
+}
+
+#foto0:target, #foto1:target, #foto2:target, #foto3:target, #foto4:target, 
+#foto5:target, #foto6:target, #foto7:target, #foto8:target, #foto9:target, #foto10:target, #foto11:target, #foto12:target, #foto13:target,
+#foto14:target, #foto15:target, #foto16:target, #foto17:target, #foto18:target, #foto19:target
+{
+	transition: top 3s ease;
+	top: 0;
+	z-index: 8; /*SIEMPRE PASA POR DELANTE DE LA IMAGEN ANTERIOR*/
+	cursor: -moz-grab; /*PROPIETARIO, "PARA ARRASTRAR"*/
+	cursor: -webkit-grab; /*PROPIETARIO, "PARA ARRASTRAR"*/
+}
+
+#foto1:not(:target), #foto2:not(:target), #foto3:not(:target), 
+#foto4:not(:target), #foto5:not(:target), #foto6:not(:target), 
+#foto7:not(:target), #foto8:not(:target), #foto9:not(:target), #foto10:not(:target), #foto11:not(:target), #foto12:not(:target), #foto13:not(:target),
+#foto14:not(:target), #foto15:not(:target), #foto16:not(:target), #foto17:not(:target), #foto18:not(:target), #foto19:not(:target)
+{
+	transition: top 2.5s ease;
+	top: -700px; 
+	z-index: inherit; /*SIEMPRE PASA POR DETRÁS DE LA IMAGEN SIGUIENTE*/
+	cursor: -moz-grabbing; /*PROPIETARIO, "ARRASTRANDO"*/
+	cursor: -webkit-grabbing; /*PROPIETARIO, "ARRASTRANDO"*/
+}
